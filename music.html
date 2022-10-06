@@ -18,9 +18,13 @@
 
     <input type="button" onclick="checkGuess()" value="Check the guess">
 </form>
+<div>
+<img src ="1.jpg" width="100" height="100" onclick ="swapImage()" id ="image">
+</div>
 
 
 <p id="result">This text will be replaced </p>
+
 
 <script> 
   correct=0;
@@ -36,24 +40,37 @@ function checkGuess(){
     {
         correct = correct+1
         alert("You got it right")
-        out.innerHTML="correct value is"+correct
+        out.innerHTML="correct value is "+correct
     }
     else
     {
     wrong = wrong+1
     alert(" Wrong Musician")
-    out.innerHTML="wrong value is"+wrong
-    }
-
-    
-    
-    
-    if(confirmed){
-        o
-    } else {
-        out.innerHTML = "Values were not confirmed"
+    out.innerHTML="wrong value is "+wrong
     }
 }
+    useImage =1
+    function swapImage()
+    {
+        switch(useImage)
+        {
+        case 1:    
+                 document.getElementById('image').src ="2.jpg"   
+                 useImage=useImage+1      
+                 break;
+
+        case 2:useImage=useImage+1
+                 document.getElementById('image').src="3.jpg"                
+                 break;
+
+        case 3:useImage=useImage+1
+                 document.getElementById('image').src="1.jpg"                
+                 break;
+    }
+
+
+    }
+
 </script>
 
 </body>
