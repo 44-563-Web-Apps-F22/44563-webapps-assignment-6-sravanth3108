@@ -48,8 +48,11 @@ function checkGuess(){
     {
     wrong = wrong+1
     alert(" Wrong Musician")
+    if(wrong==3)
+    alert("Sorry, game over")
     out.innerHTML="wrong value is "+wrong
     }
+
 }
 useImage =1
     function swapImage()
