@@ -20,6 +20,15 @@
 
 
 <p id="value">Discount will be shown here </p>
+<form>
+    <input type="radio" id="rd1" name="color" value="times"   onclick="chooseOP()">
+    <label for="rd1">*</label></br>  
+    <input type="radio" id="rd2" name="color"  value="divide" onclick="chooseOP()">
+    <label for="rd2">/</label></br>  
+    <input type="radio" id="rd3" name="color"  value="exponent" onclick="chooseOP()">
+    <label for="rd3">**</label></br>
+  </form>
+  <p id="result2">Operations</p>
 
 <script> 
 
@@ -38,6 +47,39 @@ function discount()
     console.log(result)
     document.getElementById("value").innerHTML="Discounted amounts for base " + val+ " are" +result;
     
+}
+function chooseOP()
+{
+    
+    let bamount = document.getElementById("bamount").value;    
+    let adiscount = document.getElementById("adiscount").value; 
+    let ischecked1=document.getElementById("rd1").checked
+    let ischecked2 = document.getElementById("rd2").checked
+    let  ischecked3= document.getElementById("rd3").checked
+    let result 
+    console.log(ischecked1)
+    console.log(bamount)
+    console.log(adiscount)
+    if(ischecked1==true)
+    {
+        
+        result = bamount*adiscount
+    }
+    else if(ischecked2==true)
+    {
+        
+        result = bamount/adiscount
+    }
+    else{
+    
+        result= bamount**adiscount
+    }
+    console.log(result)
+    document.getElementById("result2").innerHTML=result
+    
+    
+
+
 }
 
 </script>
