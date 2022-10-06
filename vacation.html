@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Select vacation</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     </head>
  
 <body>
@@ -21,7 +23,7 @@
        value="false">
     <label for="v3">Resort</label></br>
 
-    <input type="button" onclick="selectVacation()" value="Select a vacation">
+    <input type="button" class = "btn btn-danger" onclick="selectVacation()" value="Select a vacation">
   </form>
 
 
@@ -33,7 +35,7 @@
     <label for="price">Enter price</label>
     <input type ="text" id="price" name="price" > <br>
 
-    <input type="button"  value="Update the vacation" onclick="updateVacation()">
+    <input type="button"  class = "btn btn-warning" value="Update the vacation" onclick="updateVacation()">
 </form>
 <p id="cityprice">This text will be replaced </p>
 

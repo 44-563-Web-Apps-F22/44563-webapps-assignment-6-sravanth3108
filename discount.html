@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Calculate discount</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     </head>
  
 <body>
@@ -15,7 +17,7 @@
     <label for="adiscount">Enter the discount percentage</label>
     <input type ="number" id="adiscount" name="adiscount" value = 10> <br>
 
-    <input type="button" onclick="discount()" value="Apply discount">
+    <input type="button" class = "btn btn-warning" onclick="discount()" value="Apply discount">
 </form>
 
 
@@ -29,6 +31,7 @@
     <label for="rd3">**</label></br>
   </form>
   <p id="result2">Operations</p>
+
 
 <script> 
 
@@ -50,7 +53,6 @@ function discount()
 }
 function chooseOP()
 {
-    
     let bamount = document.getElementById("bamount").value;    
     let adiscount = document.getElementById("adiscount").value; 
     let ischecked1=document.getElementById("rd1").checked
@@ -76,10 +78,6 @@ function chooseOP()
     }
     console.log(result)
     document.getElementById("result2").innerHTML=result
-    
-    
-
-
 }
 
 </script>
