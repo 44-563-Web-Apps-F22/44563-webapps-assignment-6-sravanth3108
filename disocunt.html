@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate discount</title>
+    </head>
+ 
+<body>
+
+<h2>Sravanth Kumar Reddy Pullamgari Computes Discount</h2>
+
+<form>
+    <label for="bamount">Enter base amount </label>
+    <input type ="number" id="bamount" name="bamount" value=20> <br>
+
+    <label for="adiscount">Enter the discount percentage</label>
+    <input type ="number" id="adiscount" name="adiscount" value = 10> <br>
+
+    <input type="button" onclick="discount()" value="Apply discount">
+</form>
+
+
+<p id="value">Discount will be shown here </p>
+
+<script> 
+
+function discount()
+{
+    let bamount = document.getElementById("bamount").value;
+    let val=String(bamount)
+    let adiscount = document.getElementById("adiscount").value; 
+    let result="";
+    for(let i=1;i<6;i++)
+    {
+        var caldisc = (bamount*i) - ((bamount*i)*(adiscount)/100)
+        result = result +" "+String(caldisc);
+    }   
+    console.log(caldisc)
+    console.log(result)
+    document.getElementById("value").innerHTML="Discounted amounts for base " + val+ " are" +result;
+    
+}
+
+</script>
+
+</body>
+</html> 
